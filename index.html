@@ -1,0 +1,259 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Image Example</title> 
+	<style type="text/css">
+	      body{
+	        background-image:url("img/Xin Jiang.jpg");
+	        background-repeat:no-repeat;
+	        background-size:cover;
+	      }
+		  img{ 
+			margin-left: 50px;
+			width:600px;
+            height:400px;
+		  }
+		  div{
+			  display: inline-block;
+		  }
+		  .content{
+		            width:50%;
+					color: aqua;
+					font-size: 20px;
+					display: inline-block;
+					border: 3px solid aqua;	
+					margin-left: 75px;
+					
+					margin-bottom: 100px;
+		  }
+		  
+		  .img2 video{
+			  margin-left: 100px;			 
+			  height: auto;
+			  
+		  }
+			  
+		  .class1{
+			  margin-left: 50px;
+		  }
+		  .scrollable-content {
+		      height: 300px; 
+		      overflow-y: auto;
+		      padding: 10px;
+		  }
+		  .modal {
+		      display: none; 
+		      position: fixed;
+		      z-index: 1;
+		      left: 0;
+		      top: 0;
+		      width: 100%;
+		      height: 100%;
+		      overflow: auto;
+		      background-color: rgb(0,0,0);
+		      background-color: rgba(0,0,0,0.4); 
+		      
+		  }
+		  
+		  .modal-content {
+		      background-color: #fefefe;
+		      
+		      margin: 0 auto;
+		      padding: 20px;
+		      border: 1px solid #888;
+		      width: 80%; 
+		      max-width: 600px;
+		      position: absolute;
+		      top: 50%;
+		      left: 50%;
+		      transform: translate(-50%, -50%);
+		  }
+		  
+		  .close {
+		      color: #aaa;
+		      float: right;
+		      font-size: 28px;
+		      font-weight: bold;
+		  }
+		  
+		  .close:hover,
+		  .close:focus {
+		      color: black;
+		      text-decoration: none;
+		      cursor: pointer;
+		  }
+	    .img1 img {
+	            transition: transform 0.3s ease, opacity 0.3s ease;
+	        }
+	        .img1 img:hover {
+	            transform: scale(1.02);
+	            opacity: 0.9; 
+	        }
+	
+		@keyframes slideShow {
+		    0% { background-image: url("img/Xin Jiang.jpg"); }
+		    33% { background-image: url("img/map.jpg"); }
+		    66% { background-image: url("img/weinisi.jpg"); }
+		    100% { background-image: url("img/Xin Jiang.jpg"); }
+		}
+		
+		
+		.slide-show-container {
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    background-size: cover;
+		    background-position: center;
+		    z-index: -1; 
+		    animation: slideShow 10s infinite; 
+		}
+		.carousel-container {
+		    position: relative;
+		    width: 600px; /* 与图片宽度一致 */
+		    height: 400px; /* 与图片高度一致 */
+		    overflow: hidden;
+		    margin-left: 50px; /* 与原始图片位置一致 */
+		}
+		 
+		.carousel-img {
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    opacity: 0;
+		    transition: opacity 1s ease-in-out;
+		}
+		 
+		.carousel-img.active {
+		    opacity: 1;
+		}
+				
+	</style> 
+</head>  
+<body>  
+
+    <div class="slide-show-container"></div>
+    <div class="carousel-container">
+            <img src="img/weinisi.jpg" alt="Weinisi Image" class="carousel-img active">
+            <img src="img/Xin Jiang.jpg" alt="Xin Jiang Image" class="carousel-img">
+            <img src="img/map.jpg" alt="Map Image" class="carousel-img">
+        </div>
+	
+    <div class="content">
+        <div class="scrollable-content">
+			
+			陆上丝绸之路的终点：丝绸之路沿着古代中国西北边境的塞外走廊向西延伸，经过中亚、西亚、南亚等地区，最终到达地中海沿岸和欧洲。君士坦丁堡作为丝绸之路的西端终点站之一，是中国商品进入欧洲市场的重要渠道。中国丝绸等商品通过这条路线运送到君士坦丁堡，再由此分发到欧洲各地。
+			海上丝绸之路的参与：从7世纪开始，阿拉伯帝国和波斯帝国在印度洋上建立起强大的航海力量，并开辟了从红海到中国南海的海上丝绸之路。君士坦丁堡作为地中海最重要的港口之一，也参与了这个网络，并通过阿拉伯和波斯等中间商来获取中国商品。
+			与中国的贸易：早在公元1世纪，就已经有了连接东西方的陆路贸易路线。君士坦丁堡不仅通过陆上丝绸之路与中国进行贸易往来，还通过海上丝绸之路与中国保持联系。在唐朝和宋朝时期，甚至有拜占庭商人直接前往中国进行贸易。
+			与罗斯的贸易：罗斯人利用河流和湖泊作为交通工具，在东欧广阔而富饶的土地上进行农业、畜牧业等活动，并生产各种商品。他们经常到君士坦丁堡进行贸易活动，在那里建立自己的教堂和墓地，与拜占庭人在文化和宗教上多有交流。
+			与法蒂玛王朝的贸易：法蒂玛王朝与拜占庭帝国在地中海上展开了激烈的竞争，但两国之间也有着密切的商业联系。拜占庭商人将来自君士坦丁堡或西方的商品运往法蒂玛王朝的首都开罗，换取埃及或东方的商品，如棉花、亚麻、糖、香料等。
+		  </div>
+	</div>
+	<div class="img2">
+	   <video controls id="myVideo">
+	   		   <source src="img/video.mp4" type="video/mp4">
+	   		   
+	   	   </video>
+	</div>
+	
+	<div class="class1">
+		<input type="button" value="完成" onclick="toggleContent();"/>
+	</div>
+	<div id="myModal" class="modal">
+	        <div class="modal-content">
+	            <span class="close" onclick="closeModal()">&times;</span>
+	            <p>视频即将开始播放，请点击确定。</p>
+	            <button onclick="playVideo()">确定</button>
+	        </div>
+	    </div>
+	 
+	    <script>
+	    
+	        function toggleContent() {
+	            var content = document.getElementById("scrollableContent");
+	            if (content.style.display === "none" || content.style.display === "") {
+	                content.style.display = "block";
+	            } else {
+	                content.style.display = "none";
+	            }
+	        }
+	 
+	        
+	        function showModal() {
+	            var modal = document.getElementById("myModal");
+	            modal.style.display = "block";
+	        }
+			
+	 
+	        
+	        function closeModal() {
+	            var modal = document.getElementById("myModal");
+	            modal.style.display = "none";
+	        }
+	 
+	       
+	        function playVideo() {
+	            var video = document.getElementById("myVideo");
+	            video.play();
+	            closeModal(); 
+	        }
+
+	        window.onload = function() {
+	            showModal(); 
+	            var video = document.getElementById("myVideo");
+	        };
+			
+			
+			
+	        let currentIndex = 0;
+	        const images = document.querySelectorAll('.carousel-img');
+	        const totalImages = images.length;
+	         
+	        function showNextImage() {
+	            images[currentIndex].classList.remove('active');
+	            currentIndex = (currentIndex + 1) % totalImages;
+	            images[currentIndex].classList.add('active');
+	        }
+	         
+	        // 设置轮播间隔（例如每3秒切换一次）
+	        setInterval(showNextImage, 3000);
+	         
+	        // 其他JavaScript函数保持不变
+	        function toggleContent() {
+	            var content = document.querySelector(".scrollable-content");
+	            if (content.style.display === "none" || content.style.display === "") {
+	                content.style.display = "block";
+	            } else {
+	                content.style.display = "none";
+	            }
+	        }
+	         
+	        function showModal() {
+	            var modal = document.getElementById("myModal");
+	            modal.style.display = "block";
+	        }
+	         
+	        function closeModal() {
+	            var modal = document.getElementById("myModal");
+	            modal.style.display = "none";
+	        }
+	         
+	        function playVideo() {
+	            var video = document.getElementById("myVideo");
+	            video.play();
+	            closeModal(); 
+	        }
+	         
+	        window.onload = function() {
+	            showModal(); 
+	            var video = document.getElementById("myVideo");
+	            // 可以在这里添加其他初始化代码
+	        };
+	    </script>
+</body> 
+
+</body>
+</html>
